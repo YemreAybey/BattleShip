@@ -52,6 +52,10 @@ const gameBoard = ships => {
     return ships.every(ship => ship.isSunk() == true);
   };
 
+  const gameLoop = () => {
+    
+  }
+
   return {
     board,
     locOk,
