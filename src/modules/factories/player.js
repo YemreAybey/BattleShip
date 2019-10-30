@@ -1,22 +1,21 @@
 const player = () => {
-
-  const humanAttack = (board, row, col) => {
-    return board.receiveAttack([row, col]);
-  }
-
-  const aiAttack = (gameBoard) => {
-    let row;
-    let col;
-
-    while (gameBoard.board[row][col] == 'X' || gameBoard.board[row][col] == 'M') {
-      row = randomNumber();
-      col = randomNumber();
+  const pAttack = (gBoard, row, col) => {
+    gBoard.recieveAttack([row, col]);
+  };
+​
+  const aiAttack = gBoard => {
+    let row = Math.round(Math.random() * 9);
+    let col = Math.round(Math.random() * 9);
+​
+    while (gBoard.board[row][col] == 'X' || gBoard.board[row][col] == 'X') {
+      row = Math.round(Math.random() * 9);
+      col = Math.round(Math.random() * 9);
     }
-    gameBoard.receiveAttack([row, col]);
-  }
-
-  const randomNumber = () => {
-    return Math.round((Math.random() * 9));
-  }
-
-}
+    gBoard.recieveAttack([row, col]);
+    return [row, col];
+  };
+​
+  return { pAttack, aiAttack };
+};
+​
+export default player;
