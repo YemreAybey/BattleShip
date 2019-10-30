@@ -6,9 +6,9 @@ const gameBoard = ships => {
 
   const locOk = (size, row, col, path) => {
     if (path == 'vertical') {
-      return row + size < board.length ? true : false;
+      return row + size - 1 < board.length ? true : false;
     } else {
-      return col + size < board.length ? true : false;
+      return col + size - 1 < board.length ? true : false;
     }
   };
 
@@ -25,6 +25,8 @@ const gameBoard = ships => {
           board[row][col + i] = 1;
         }
       }
+    } else {
+      console.log('wrong place');
     }
   };
 
@@ -51,7 +53,6 @@ const gameBoard = ships => {
   const isAllSunk = () => {
     return ships.every(ship => ship.isSunk() == true);
   };
-
 
   return {
     board,

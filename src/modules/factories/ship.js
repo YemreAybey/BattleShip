@@ -2,6 +2,9 @@ const ship = size => {
   const loc = [];
   let hits = 0;
 
+  const hitChange = () => {
+    hits = 0;
+  };
   const hitShow = () => {
     return hits;
   };
@@ -14,7 +17,7 @@ const ship = size => {
       hits += 1;
     }
   };
-  return { size, loc, hits, isSunk, hit, hitShow };
+  return { size, loc, hits, isSunk, hit, hitShow, hitChange };
 };
 
 export default ship;
