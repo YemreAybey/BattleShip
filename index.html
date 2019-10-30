@@ -2,14 +2,148 @@
 <html>
   <head>
     <title>Getting Started</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
   </head>
   <body>
-    <div class="container">
+    <div class="containery">
       <div id="player-grid"></div>
       <div id="ai-grid"></div>
     </div>
+    <div class="formArea d-none">
+
+        <div class="form form-group p-2" id="f0">
+          <span class ="text-primary">Size : 1</span></br>
+          <label>Select Row</label>
+          <input class="form-control rows0" type="number" min="0" max="9" value="0" /></br>
+          <label>Select Col</label>
+          <input class="form-control cols0" type="number" min="0" max="9" value="0" /></br>
+          <select class="form-control opt0" name="path0" id="path0">
+            <option value="horizontal">horizontal</option>
+            <option value="vertical">vertical</option>
+          </select>
+          <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s0">Save</button>
+        </div>
+  
+        <div class="form form-group p-2" id="f1">
+            <span class ="text-primary">Size : 1</span></br>
+            <label>Select Row</label>
+            <input class="form-control rows1" type="number" min="0" max="9" value="0" /></br>
+            <label>Select Col</label>
+            <input class="form-control cols1" type="number" min="0" max="9" value="0" /></br>
+            <select class="form-control opt1" name="path1" id="path1">
+              <option value="horizontal">horizontal</option>
+              <option value="vertical">vertical</option>
+            </select>
+            <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s1">Save</button>
+        </div>
+    
+  
+        <div class="form form-group p-2" id="f2">
+            <span class ="text-primary">Size : 1</span></br>
+            <label>Select Row</label>
+            <input class="form-control rows2" type="number" min="0" max="9" value="0" /></br>
+            <label>Select Col</label>
+            <input class="form-control cols2" type="number" min="0" max="9" value="0" /></br>
+            <select class="form-control opt2" name="path2" id="path2">
+              <option value="horizontal">horizontal</option>
+              <option value="vertical">vertical</option>
+            </select>
+            <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s2">Save</button>
+          </div>
+    
+  
+          <div class="form form-group p-2" id="f3">
+              <span class ="text-primary">Size : 2</span></br>
+              <label>Select Row</label>
+              <input class="form-control rows3" type="number" min="0" max="9" value="0" /></br>
+              <label>Select Col</label>
+              <input class="form-control cols3" type="number" min="0" max="9" value="0" /></br>
+              <select class="form-control opt3" name="path3" id="path3">
+                <option value="horizontal">horizontal</option>
+                <option value="vertical">vertical</option>
+              </select>
+              <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s3">Save</button>
+            </div>
+      
+  
+            <div class="form form-group p-2" id="f4">
+                <span class ="text-primary">Size : 2</span></br>
+                <label>Select Row</label>
+                <input class="form-control rows4" type="number" min="0" max="9" value="0" /></br>
+                <label>Select Col</label>
+                <input class="form-control cols4" type="number" min="0" max="9" value="0" /></br>
+                <select class="form-control opt4" name="path4" id="path4">
+                  <option value="horizontal">horizontal</option>
+                  <option value="vertical">vertical</option>
+                </select>
+                <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s4">Save</button>
+              </div>
+        
+  
+              <div class="form form-group p-2" id="f5">
+                  <span class ="text-primary">Size : 3</span></br>
+                  <label>Select Row</label>
+                  <input class="form-control rows5" type="number" min="0" max="9" value="0" /></br>
+                  <label>Select Col</label>
+                  <input class="form-control cols5" type="number" min="0" max="9" value="0" /></br>
+                  <select class="form-control opt5" name="path5" id="path5">
+                    <option value="horizontal">horizontal</option>
+                    <option value="vertical">vertical</option>
+                  </select>
+                  <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s5">Save</button>
+                </div>
+          
+  
+                <div class="form form-group p-2" id="f6">
+                    <span class ="text-primary">Size : 3</span></br>
+                    <label>Select Row</label>
+                    <input class="form-control rows6" type="number" min="0" max="9" value="0" /></br>
+                    <label>Select Col</label>
+                    <input class="form-control cols6" type="number" min="0" max="9" value="0" /></br>
+                    <select class="form-control opt6" name="path6" id="path6">
+                      <option value="horizontal">horizontal</option>
+                      <option value="vertical">vertical</option>
+                    </select>
+                    <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s6">Save</button>
+                  </div>
+            
+  
+                  <div class="form form-group p-2" id="f7">
+                      <span class ="text-primary">Size : 4</span></br>
+                      <label>Select Row</label>
+                      <input class="form-control rows7" type="number" min="0" max="9" value="0" /></br>
+                      <label>Select Col</label>
+                      <input class="form-control cols7" type="number" min="0" max="9" value="0" /></br>
+                      <select class="form-control opt7" name="path7" id="path7">
+                        <option value="horizontal">horizontal</option>
+                        <option value="vertical">vertical</option>
+                      </select>
+                      <button class="btn btn-sm mx-auto mt-1 d-block btn-primary saveShip" id="s7">Save</button>
+                    </div>
+              
+              
+                          
+                  </div>
+     <div class="btns">
+       <button class="btn btn-primary start">start</button> 
+       <button class="btn btn-success reset">reset</button>
+       <button class="btn btn-warning place">Place Ships</button>
+      </div>
+
+      <div class="d-none modal-window">
+        <div class="modal-content w-50">
+          <div class="w-100">
+          <button class="btn btn-secondary float-right closing d-flex justify-content-center">X</button>
+         </div>
+          <h2 class='msg text-center'></h2>
+     </div>
+ </div>
     <script src="bundle.js"></script>
   </body>
 </html>
