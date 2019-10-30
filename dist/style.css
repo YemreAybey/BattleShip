@@ -1,0 +1,23 @@
+#player-grid,
+#ai-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
+​
+.pcell{
+  border: 1px solid black;
+}
+
+.aicell{
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
