@@ -12,9 +12,8 @@ import {
   winMsg
 } from './modules/ai';
 import gameBoard from './modules/factories/gameBoard';
-​
+
 createBoards();
-​
 const forms = document.querySelectorAll('.form');
 const aiGrid = document.querySelectorAll('#ai-grid .aicell');
 const plGrid = document.querySelectorAll('#player-grid .pcell');
@@ -25,7 +24,7 @@ const formArea = document.querySelector('.formArea');
 pl.addEventListener('click', () => {
   formArea.classList.toggle('d-none');
 });
-​
+
 startBtn.addEventListener('click', e => {
   const placement = pBoard.board.reduce(
     (acc, arr) => acc + arr.reduce((acc, cell) => acc + cell, 0),
@@ -48,7 +47,7 @@ aiCells.forEach(cell =>
     }
   })
 );
-​
+
 placeAiShipsV(aiBoard);
 placeAiShipsH(aiBoard);
 const res = document.querySelector('.reset');
@@ -77,7 +76,7 @@ const reconstruct = () => {
     c.classList.remove('bg-primary', 'bg-danger', 'border', 'border-danger');
     c.innerHTML = `${c.dataset.row}, ${c.dataset.col}`;
   });
-​
+
   aiB.classList.remove('bg-secondary');
   plB.classList.remove('bg-secondary');
   placeAiShipsV(aiBoard);
