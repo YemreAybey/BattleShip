@@ -2,18 +2,18 @@ import ship from './factories/ship';
 import gameBoard from './factories/gameBoard';
 import { aiGrid } from '../index';
 import { pBoard } from './pl';
-​
+
 const aiB = document.querySelector('#ai-grid');
 const plB = document.querySelector('#player-grid');
 const close = document.querySelector('.closing');
 const modal = document.querySelector('.modal-window');
 const message = document.querySelector('.msg');
-​
+
 close.addEventListener('click', e => {
   modal.classList.toggle('d-none');
   modal.classList.toggle('show-modal');
 });
-​
+
 const aiShips = [
   ship(1),
   ship(3),
@@ -24,9 +24,9 @@ const aiShips = [
   ship(1),
   ship(1)
 ];
-​
+
 const aiBoard = gameBoard(aiShips);
-​
+
 const checkSpaceV = (b, r, c, size) => {
   for (let i = 0; i < size; i++) {
     if (r + size - 1 >= 10 || b[r + i][c] == '1') {
@@ -35,7 +35,7 @@ const checkSpaceV = (b, r, c, size) => {
   }
   return true;
 };
-​
+
 const checkSpaceH = (b, r, c, size) => {
   for (let i = 0; i < size; i++) {
     if (c + size - 1 >= 10 || b[r][c + i] == '1') {
@@ -44,7 +44,7 @@ const checkSpaceH = (b, r, c, size) => {
   }
   return true;
 };
-​
+
 const placeAiShipsV = b => {
   for (let i = 0; i < 4; i++) {
     const s = b.ships[i];
@@ -57,7 +57,7 @@ const placeAiShipsV = b => {
     b.placeShip(s, row, col, 'vertical');
   }
 };
-​
+
 const placeAiShipsH = b => {
   for (let i = 4; i < 8; i++) {
     const s = b.ships[i];
@@ -101,7 +101,7 @@ const attackAi = e => {
         let [r, c] = putMark(pBoard);
         let cell = cells[r * 10 + c];
         cell.innerHTML = pBoard.board[r][c];
-​
+
         if (cell.innerHTML == 'M') {
           cell.classList.add('bg-primary');
         } else {
@@ -141,10 +141,10 @@ const putMark = b => {
     col = Math.round(Math.random() * 9);
   }
   b.recieveAttack([row, col]);
-​
+
   return [row, col];
 };
-​
+
 const checkWinner = (cells, msg) => {
   let sum = 0;
   cells.forEach(c => {

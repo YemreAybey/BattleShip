@@ -9,7 +9,7 @@ const createBoards = () => {
       pcell.dataset.col = j;
       pcell.innerHTML = `${i}, ${j}`;
       playergrid.appendChild(pcell);
-​
+
       const aicell = document.createElement('div');
       aicell.classList.add('aicell');
       aicell.dataset.row = i;

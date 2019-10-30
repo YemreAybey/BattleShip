@@ -25,8 +25,6 @@ const gameBoard = ships => {
           board[row][col + i] = 1;
         }
       }
-    } else {
-      console.log('wrong place');
     }
   };
 
