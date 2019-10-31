@@ -40,7 +40,7 @@ Run
 npm test
 ```
 
-You will see the results in your terminal. Then you can open the 'index.htm' file on your browser and enjoy the game.
+You will see the results in your terminal. Then you can open the 'index.htm' file on your browser and enjoy the game Or you can click [here](https://yemreaybey.github.io/Battleship/) to play the game.
 
 # Authors
 
