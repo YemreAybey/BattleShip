@@ -25,7 +25,7 @@ git clone => The SSH key or URL <=
 Change to Directory
 
 ```
-cd  testin-jest
+cd  Battleship
 ```
 
 Run
@@ -40,7 +40,7 @@ Run
 npm test
 ```
 
-You will see the results in your terminal.
+You will see the results in your terminal. Then you can open the 'index.htm' file on your browser and enjoy the game.
 
 # Authors
 
